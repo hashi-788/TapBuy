@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body class="wishlist-body">
+
+        <!-- Wishlist Button -->
+        <button id="wishlistButton" class="wishlist-btn">
+            ❤️ Wishlist
+        </button>
+
+        <!-- Wishlist Drawer -->
+        <div id="wishlistDrawer" class="wishlist-drawer">
+            <div class="wishlist-header">
+                <h2>Wishlist</h2>
+                <span id="closeWishlist" class="close-btn">&times;</span>
+            </div>
+            <div class="wishlist-body">
+                <div class="wishlist-item">
+                    <img src="assets/images/product2.jpg" alt="Product" />
+                    <div class="item-details">
+                        <h4>Larissa Collar Detailed Midi Dress</h4>
+                        <p>Color: Black | Size: UK8</p>
+                        <span class="price">LKR 5,950.00</span>
+                    </div>
+                    <button class="remove-btn">🗑️</button>
+                </div>
+                <div class="wishlist-item">
+                    <img src="https://via.placeholder.com/100" alt="Product" />
+                    <div class="item-details">
+                        <h4>Givo Sleeveless Dress</h4>
+                        <p>Color: Blue | Size: M</p>
+                        <span class="price">LKR 3,990.00</span>
+                    </div>
+                    <button class="remove-btn">🗑️</button>
+                </div>
+            </div>
+
+            <div class="wishlist-footer">
+                <button class="checkout-btn">🛍️ Go to Wishlist Page</button>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
+
+        <script>
+            const wishlistBtn = document.getElementById('wishlistButton');
+            const wishlistDrawer = document.getElementById('wishlistDrawer');
+            const closeWishlist = document.getElementById('closeWishlist');
+            const overlay = document.getElementById('overlay');
+
+            wishlistBtn.addEventListener('click', () => {
+                wishlistDrawer.classList.add('open');
+                overlay.classList.add('active');
+            });
+
+            closeWishlist.addEventListener('click', () => {
+                wishlistDrawer.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+
+            overlay.addEventListener('click', () => {
+                wishlistDrawer.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+        </script>
+
+
+    </body>
+</html>

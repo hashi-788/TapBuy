@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users | Admin</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="manage-users-body">
+
+  <div class="container-fluid coffee-users-container">
+    <div class="row">
+
+      <!-- Header -->
+      <div class="col-12 text-center coffee-users-header">
+        <h1>Manage All Users</h1>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="col-12 coffee-users-search">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <div class="input-group coffee-users-search-group">
+              <input type="text" class="form-control coffee-users-search-input" placeholder="Search user by name or email">
+              <button class="btn coffee-users-search-btn">
+                <i class="bi bi-search"></i> Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Header -->
+      <div class="col-12 coffee-users-table-head">
+        <div class="row text-center">
+          <div class="col-2 col-lg-1"><span>#</span></div>
+          <div class="col-2 d-none d-lg-block"><span>Profile</span></div>
+          <div class="col-4 col-lg-2"><span>User Name</span></div>
+          <div class="col-4 col-lg-2"><span>Email</span></div>
+          <div class="col-2 d-none d-lg-block"><span>Mobile</span></div>
+          <div class="col-2 d-none d-lg-block"><span>Registered</span></div>
+          <div class="col-2 col-lg-1"><span>Action</span></div>
+        </div>
+      </div>
+
+      <!-- User Row -->
+      <div class="col-12 coffee-users-row">
+        <div class="row align-items-center text-center">
+          <div class="col-2 col-lg-1">
+            <span>1</span>
+          </div>
+          <div class="col-2 d-none d-lg-block">
+            <img src="assets/images/img1.jpg" alt="Profile" class="coffee-users-avatar">
+          </div>
+          <div class="col-4 col-lg-2">
+            <span class="coffee-users-name">Sahan Perera</span>
+          </div>
+          <div class="col-4 col-lg-2">
+            <span class="coffee-users-email">sahan@gmail.com</span>
+          </div>
+          <div class="col-2 d-none d-lg-block">
+            <span class="coffee-users-mobile">0766318088</span>
+          </div>
+          <div class="col-2 d-none d-lg-block">
+            <span class="coffee-users-date">2025-07-05</span>
+          </div>
+          <div class="col-2 col-lg-1 d-grid">
+            <button class="btn coffee-btn-block">Block</button>
+            <button class="btn coffee-btn-unblock mt-1">Unblock</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="col-12 coffee-users-pagination">
+        <nav>
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link coffee-page-link" href="#"><span>&laquo;</span></a></li>
+            <li class="page-item active"><a class="page-link coffee-page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link coffee-page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link coffee-page-link" href="#"><span>&raquo;</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

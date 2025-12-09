@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Products | Admin</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body class="coffee-products-body">
+
+        <div class="container-fluid coffee-products-container">
+            <div class="row">
+
+                <div class="col-12 text-center coffee-products-header">
+                    <h1>Manage All Products</h1>
+                </div>
+
+                <div class="col-12 coffee-products-search">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="input-group coffee-products-search-group">
+                                <input type="text" class="form-control coffee-products-search-input" placeholder="Search product by name or category">
+                                <button class="btn coffee-products-search-btn">
+                                    <i class="bi bi-search"></i> Search
+                                </button>
+                                <button class="btn coffee-products-add-btn">Add Products</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 coffee-products-table-head">
+                    <div class="row text-center">
+                        <div class="col-2 col-lg-1"><span>#</span></div>
+                        <div class="col-2 d-none d-lg-block"><span>Image</span></div>
+                        <div class="col-4 col-lg-2"><span>Title</span></div>
+                        <div class="col-4 col-lg-2"><span>Price</span></div>
+                        <div class="col-2 d-none d-lg-block"><span>Quantity</span></div>
+                        <div class="col-2 d-none d-lg-block"><span>Date</span></div>
+                        <div class="col-2 col-lg-1"><span>Action</span></div>
+                    </div>
+                </div>
+
+                <div class="col-12 coffee-products-row">
+                    <div class="row align-items-center text-center">
+                        <div class="col-2 col-lg-1">
+                            <span>1</span>
+                        </div>
+                        <div class="col-2 d-none d-lg-block">
+                            <img src="assets/images/img1.jpg" alt="Product" class="coffee-products-img">
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <span class="coffee-products-title">Long Frock</span>
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <span class="coffee-products-price">Rs. 900.00</span>
+                        </div>
+                        <div class="col-2 d-none d-lg-block">
+                            <span class="coffee-products-qty">30</span>
+                        </div>
+                        <div class="col-2 d-none d-lg-block">
+                            <span class="coffee-products-date">2025-09-07</span>
+                        </div>
+                        <div class="col-2 col-lg-1 d-grid">
+                            <button class="btn coffee-btn-block">Block</button>
+                            <button class="btn coffee-btn-unblock mt-1">Unblock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 coffee-products-pagination">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item"><a class="page-link coffee-page-link" href="#"><span>&laquo;</span></a></li>
+                            <li class="page-item active"><a class="page-link coffee-page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link coffee-page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link coffee-page-link" href="#"><span>&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!--                <hr class="coffee-products-divider" />
+                                <div class="col-12 text-center coffee-products-category-title">
+                                    <h3>Manage Categories</h3>
+                                </div>
+                
+                                <div class="col-12 mb-3">
+                                    <div class="row gap-2 justify-content-center coffee-products-category-list">
+                                        <div class="col-12 col-lg-3 coffee-category-card">
+                                            <div class="row">
+                                                <div class="col-8"><label class="form-label fw-bold">Men</label></div>
+                                                <div class="col-4 text-end"><i class="bi bi-trash3-fill text-danger"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-3 coffee-category-card">
+                                            <div class="row">
+                                                <div class="col-8"><label class="form-label fw-bold">Men</label></div>
+                                                <div class="col-4 text-end"><i class="bi bi-trash3-fill text-danger"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-3 coffee-category-card">
+                                            <div class="row">
+                                                <div class="col-8"><label class="form-label fw-bold">Men</label></div>
+                                                <div class="col-4 text-end"><i class="bi bi-trash3-fill text-danger"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+            </div>
+        </div>
+
+        <script src="assets/js/bootstrap.bundle.js"></script>
+    </body>
+
+</html>

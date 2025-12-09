@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/notification.css">
+    </head>
+    <body class="checkout-body" onload="loadData();">
+        <div class="checkout-container">
+
+            <!-- Shipping Details -->
+            <div class="checkout-shipping-section">
+                <h2 class="checkout-section-title">Shipping Details</h2>
+
+                <label class="checkout-checkbox-label">
+                    <input type="checkbox" class="checkout-checkbox" id="checkbox1">
+                    Same as your current address?
+                </label>
+
+                <form class="checkout-shipping-form">
+                    <div class="checkout-form-row">
+                        <div class="checkout-form-group">
+                            <label>First Name <span>*</span></label>
+                            <input type="text" id="first-name" placeholder="Enter first name">
+                        </div>
+                        <div class="checkout-form-group">
+                            <label>Last Name <span>*</span></label>
+                            <input type="text" id="last-name" placeholder="Enter last name">
+                        </div>
+                    </div>
+
+                    <div class="checkout-form-group">
+                        <label>City <span>*</span></label>
+                        <select id="city">
+                            <option value="0">Select</option>
+                        </select>
+                    </div>
+
+                    <div class="checkout-form-group">
+                        <label>Address Line 1 <span>*</span></label>
+                        <input type="text" id="address1" placeholder="House number and street name">
+                    </div>
+
+                    <div class="checkout-form-group">
+                        <label>Address Line 2</label>
+                        <input type="text" id="address2" placeholder="Apartment, suite, etc. (optional)">
+                    </div>
+
+                    <div class="checkout-form-row">
+                        <div class="checkout-form-group">
+                            <label>Postal Code <span>*</span></label>
+                            <input type="text" id="postal-code" placeholder="Enter postal code">
+                        </div>
+                        <div class="checkout-form-group">
+                            <label>Mobile <span>*</span></label>
+                            <input type="text" id="mobile" placeholder="Enter mobile number">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="checkout-order-summary">
+                <h3 class="checkout-summary-title">Your Order</h3>
+
+                <div class="checkout-order-box">
+
+                    <table class="checkout-order-table">
+                        <tbody id="st-tbody">
+                            <tr id="st-item-tr">
+                                <td><span id="st-item-title">Product-1</span> <span class="quantity"><span id="st-item-qty">x1</span></span></td>
+                                <td>Rs. <span id="st-item-subtotal"></span></td>
+                            </tr>
+                            <tr id="st-order-subtotal-tr">
+                                <td>Subtotal</td>
+                                <td>Rs. <span id="st-subtotal"></span></td>
+                            </tr>
+                            <tr id="st-order-shipping-tr">
+                                <td class="title">Shipping Charges</td>
+                                <td class="amount">Rs. <span id="st-shipping-amount"></span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="checkout-total-row" id="st-order-total-tr">
+                        <span>Total</span>
+                        <strong class="order-total-amount">Rs. <span id="st-total"></span></strong>>
+                    </div>
+
+                    <div class="checkout-payment-option">
+                        <input type="radio" id="card" name="payment" checked>
+                        <label for="card">Visa / Master Card</label>
+                        <p>You can pay with your credit or debit card.</p>
+                    </div>
+
+                    <button class="checkout-checkout-btn" onclick="checkout();">Process to Checkout</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
+        <script src="assets/js/notification.js"></script>
+        <script src="assets/js/checkout.js"></script>
+
+    </body>
+</html>

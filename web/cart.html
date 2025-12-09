@@ -1,0 +1,96 @@
+<div class="container-fluid cart-container" id="cart-main">
+    <div class="row">
+        <div class="col-12">
+            <div class="card cart-card">
+                <div class="card-header bg-transparent border-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb cart-breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="card-body">
+                    <p class="cart-title text-center">My Cart</p>
+
+                    <hr class="cart-divider" />
+
+                    <div class="row mt-4">
+                        <!-- Product table -->
+                        <div class="col-12 col-lg-9 mb-4">
+
+                            <div>
+                                <div class="row cart-header text-center fw-bold">
+                                    <div class="col-3 py-2">Product</div>
+                                    <div class="col-2 py-2">Title</div>
+                                    <div class="col-2 py-2">Price</div>
+                                    <div class="col-2 py-2">Quantity</div>
+                                    <div class="col-2 py-2">Subtotal</div>
+                                    <div class="col-1 py-2">Delete</div>
+                                </div>
+                            </div>
+                            
+                            <hr />
+
+                            <div id="cartItemContainer">
+                                <div class="row cart-item align-items-center text-center d-none" id="cartItemRow">
+                                    <div class="col-3 py-2">
+                                        <a id="cartItema">
+                                            <img id="cartItemImage" src="" class="img-fluid rounded" alt="Product" />
+                                        </a>
+                                    </div>
+
+                                    <div class="col-2 py-2">
+                                        <h6 class="text-muted" id="cartItemTitle"></h6>
+                                    </div>
+
+                                    <div class="col-2 py-2 text-muted">
+                                        Rs. <span id="cartItemPrice"></span>
+                                    </div>
+
+                                    <div class="col-2 py-2">
+                                        <input id="cartItemQty" type="number" class="form-control cart-qty" min="1" />
+                                    </div>
+
+                                    <div class="col-2 py-2 text-muted">
+                                        Rs. <span id="cartItemSubtotal"></span>
+                                    </div>
+
+                                    <div class="col-1 py-2">
+                                        <i class="bi bi-trash3 cart-delete"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- END cartItemContainer -->
+
+                            <hr />
+
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="col-12 col-lg-3 cart-summary">
+                            <h4 class="fw-bold mb-3">Order Summary</h4>
+                            <hr />
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fw-semibold">Quantities</span>
+                                <span class="fw-semibold" id="cartTotalQty">2</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fw-semibold">Total</span>
+                                <span class="fw-semibold" id="cartTotal">Rs. 900.00</span>
+                            </div>
+                            <a href="checkout.html" class="btn cart-btn w-100 mt-4">Process to Checkout</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

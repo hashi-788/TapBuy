@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Products</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/notification.css"/>
+    </head>
+
+    <body onload="loadFeatures();">
+        <div class="container-fluid py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 add-product-card shadow-lg p-5 rounded-4">
+                    <div class="text-center mb-4">
+                        <h2 class="h2 add-product-title fw-bold">Add New Product</h2>
+                    </div>
+
+                    <div class="row g-4 mt-3">
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Category</label>
+                            <select class="form-select text-center add-product-select" id="category" onchange="updateModels();">
+                                <option value="0">Select Category</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Model</label>
+                            <select class="form-select text-center add-product-select" id="model">
+                                <option value="0">Select Model</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Storage</label>
+                            <select class="form-select text-center add-product-select" id="storage">
+                                <option value="0">Select Storage</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Color</label>
+                            <select class="form-select text-center add-product-select" id="color">
+                                <option value="0">Select Color</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Quantity</label>
+                            <input type="number" class="form-control add-product-input" id="quantity" min="0" value="0" />
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label fw-bold fs-5 add-product-text">Cost per Item</label>
+                            <div class="input-group">
+                                <span class="input-group-text add-product-textarea text-light">Rs</span>
+                                <input type="text" class="form-control add-product-input" id="price" />
+                                <span class="input-group-text add-product-bg text-light">.00</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-bold fs-5 add-product-text">Title</label>
+                            <input type="text" class="form-control add-product-input" id="title" />
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-bold fs-5 add-product-text">Description</label>
+                            <textarea class="form-control add-product-textarea" id="description" rows="8"></textarea>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-start">
+                                <label for="img1" class="form-label fw-bold fs-6 add-product-text">Image 1</label>
+                                <input type="file" id="image1" class="form-control user-upload-input" />
+                            </div>
+
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-start">
+                                <label for="img2" class="form-label fw-bold fs-6 add-product-text">Image 2</label>
+                                <input type="file" id="image2" class="form-control user-upload-input" />
+                            </div>
+
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-start">
+                                <label for="img3" class="form-label fw-bold fs-6 add-product-text">Image 3</label>
+                                <input type="file" id="image3" class="form-control user-upload-input" />
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mt-4">
+                            <button type="button" class="add-product-save-btn w-100 py-3 fw-bold" onclick="productListing();">
+                                <i class="bi bi-save"></i> Save Product
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/bootstrap.bundle.js"></script>
+        <script src="assets/js/add-product.js"></script>
+        <script src="assets/js/notification.js"></script>
+    </body>
+
+</html>

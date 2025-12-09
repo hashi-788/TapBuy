@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+ <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="admin-panel-body">
+  <aside class="admin-panel-sidebar">
+    <div class="admin-panel-text">Sahan Perera</div>
+    <nav class="admin-panel-nav">
+      <a href="#" class="admin-panel-nav-item active">Overview</a>
+      <a href="#">Products</a>
+      <a href="#">Customers</a>
+      <a href="#">Transactions</a>
+      <a href="#">Statistics</a>
+      <a href="#">Change Password</a>
+      <a href="#">Log Activity</a>
+    </nav>
+    <div class="admin-panel-support">
+      <a href="#">Settings</a>
+      <a href="#">Help</a>
+      <div class="admin-panel-dark-mode">
+        <label>Dark Mode</label>
+        <input type="checkbox">
+      </div>
+    </div>
+  </aside>
+
+  <main class="admin-panel-main">
+    <header class="admin-panel-header">
+      <h1>Dashboard</h1>
+      <input type="search" placeholder="Search anything..." class="admin-panel-search">
+    </header>
+
+    <section class="admin-panel-summary">
+      <div class="admin-panel-card">
+        <h3>Total Revenue</h3>
+        <p class="admin-panel-value">$612,839</p>
+        <span class="admin-panel-status up">↑ 16%</span>
+      </div>
+      <div class="admin-panel-card">
+        <h3>Total Customers</h3>
+        <p class="admin-panel-value">513,456</p>
+        <span class="admin-panel-status down">↓ 0.4%</span>
+      </div>
+      <div class="admin-panel-card">
+        <h3>Total Transactions</h3>
+        <p class="admin-panel-value">637,902</p>
+        <span class="admin-panel-status up">↑ 8%</span>
+      </div>
+      <div class="admin-panel-card">
+        <h3>Total Products</h3>
+        <p class="admin-panel-value">256,600</p>
+        <span class="admin-panel-status up">↑ 2%</span>
+      </div>
+    </section>
+
+    <section class="admin-panel-analytics">
+      <div class="admin-panel-chart">
+        <h3>Revenue Growth</h3>
+        <div class="admin-panel-placeholder">[Revenue Chart]</div>
+      </div>
+      <div class="admin-panel-chart">
+        <h3>Customer Growth</h3>
+        <div class="admin-panel-placeholder">[Map Visualization]</div>
+      </div>
+    </section>
+
+    <section class="admin-panel-bottom">
+      <div class="admin-panel-table">
+        <h3>Top Transactions</h3>
+        <table>
+          <tr><th>ID</th><th>Item</th><th>Date</th><th>Purchase</th></tr>
+          <tr><td>#23442</td><td>Leather Crop Top</td><td>12 Jan</td><td>$2,349</td></tr>
+          <tr><td>#25446</td><td>Female Tote Bag</td><td>3 Jan</td><td>$1,899</td></tr>
+        </table>
+      </div>
+      <div class="admin-panel-product">
+        <h3>Top Product</h3>
+        <img src="assets/images/img2.jpg" style="height: 50px; width: 50p" alt="Product">
+        <p>Denim Jacket with White Feathers</p>
+        <span>240+ Sold</span>
+      </div>
+      <div class="admin-panel-ad">
+        <p>See more detailed statistics to analyze your decision</p>
+        <button>See More</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/notification.css" />
+</head>
+
+<body class="products-page">
+<div class="container-fluid ps-5 py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <h2 class="fw-bold mb-0">Shop</h2>
+        <div class="sort-dropdown mt-2 mt-md-0">
+            <label for="sort" class="me-2 text-secondary fw-semibold">Sort by</label>
+            <select id="st-sort" class="form-select products-sort-select d-inline-block w-auto">
+                 <option>Sort by Latest</option>
+                        <option>Sort by Oldest</option>
+                        <option>Sort by Name</option>
+                        <option>Sort by Price</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="mb-4">
+        <ul class="nav nav-pills products-category-tabs"></ul>
+    </div>
+
+    <div class="row">
+        <!-- Sidebar Filters -->
+        <aside class="col-md-3 mb-5 px-2 products-filters shop-sidebar">
+            <div class="toggle-list product-categories active filter-section">
+                <h6 class="fw-bold mt-4">CATEGORY</h6>
+                <div class="shop-submenu">
+                    <ul id="category-options" class="filter-list">
+                        <li id="category-li">
+                            <button class="category-button" id="category-button"><input type="radio" name="category" id="category-input"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="toggle-list product-color active filter-section">
+                <h6 class="fw-bold mt-4">COLOR</h6>
+                <div class="shop-submenu">
+                    <ul id="color-options" class="color-list">
+                        <li id="color-li"><button id="color-button" class="color-circle black"></button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="toggle-list product-storage active">
+                <h6 class="fw-bold mt-4">STORAGE</h6>
+                <div class="shop-submenu">
+                    <ul id="storage-options" class="storage-list">
+                        <li id="storage-li"><button class="storage-btn" id="storage-button"></button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h6 class="fw-bold mt-4">PRICE</h6>
+                <div class="price-slider">
+                    <input type="range" min="0" max="10000" value="0" class="range-input" id="coffee-min-range"/>
+                    <input type="range" min="0" max="1000000" value="10000" class="range-input" id="coffee-max-range"/>
+                    <div class="range-track"></div>
+                </div>
+                <div class="price-values">
+                    <span id="min-value">Rs.0</span>
+                    <span id="max-value">Rs.10000</span>
+                </div>
+            </div>
+
+            <div class="filter-buttons">
+                <button id="apply-btn" class="reset-btn">Apply</button>
+                <button id="reset-btn" class="reset-btn">Reset All</button>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="col-md-9">
+            <div id="st-product-template" class="col-12 col-md-3 st-product st-product-template" style="display:none;">
+                <div class="card product-card border-0 shadow-sm">
+                    <div class="position-relative">
+                        <a href="#" class="st-product-a"><img src="" class="card-img-top st-product-img"/></a>
+                        <a href="#"><span class="add-wishlist-btn"><i class="bi bi-heart"></i></span></a>
+                        <a href="#"><span class="quick-view-btn">QUICK VIEW</span></a>
+                        <a href="#"><span class="add-cart-btn"><i class="bi bi-cart"></i></span></a>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="fw-normal mt-2 st-product-title"></h6>
+                        <span class="fw-bold mb-1 st-product-price"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="st-product-container"></div>
+
+            <nav class="mt-5 products-pagination">
+                <ul class="pagination justify-content-center" id="st-pagination-list"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/notification.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/product.js"></script>
+</body>
+</html>

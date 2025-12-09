@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/notification.css"/>
+    </head>
+
+    <body onload="checkSignIn();">
+        <div class=" container-fluid">
+            <div class="row">
+                <!------------------------------- Header Start ------------------------------->
+                <header>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar d-none d-lg-block">
+                        <div class="container-fluid">
+                            <div class="navbar-brand">
+                                <img src="assets/images/logo.png" alt="Logo" />
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#" data-bs-toggle="dropdown">MOBILE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-bs-toggle="dropdown">TAB </a>
+                                    </li>                      
+                                    <li class="nav-item"><a class="nav-link" href="product.html">Shop</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" />
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-header d-none d-lg-block">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav custom-nav-links">
+                                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                                <div class="custom-right">
+                                    <a id="st-button-1" href="sign-in.html" class="navbar-text" >Login</a>
+                                    <a class="nav-link" onclick="viewCart();" href="#"><i class="bi bi-basket2-fill"></i></a>
+                                    <a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>     
+                    </nav>
+
+                    <!-- MOBILE NAV -->
+                    <nav class="navbar bg-body-tertiary fixed-top custom-navbar d-lg-none">
+                        <div class="container-fluid d-flex justify-content-between align-items-center">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/images/logo.png" alt="Logo" />
+                            </a>
+                            <button
+                                class="navbar-toggler border-0"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar"
+                                aria-controls="offcanvasNavbar"
+                                aria-label="Toggle navigation"
+                                >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="offcanvas offcanvas-end"
+                            tabindex="-1"
+                            id="offcanvasNavbar"
+                            aria-labelledby="offcanvasNavbarLabel"
+                            >
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" />
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-bs-toggle="dropdown">MOBILE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-bs-toggle="dropdown">TAB</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="product.html">Shop</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="navbar custom-header d-lg-none">
+                        <div class="container-fluid d-flex justify-content-end align-items-center">
+                            <a id="st-button-1" href="sign-in.html" class="navbar-text me-3 mt-3" style="color: wi; text-decoration: none;">Login</a>
+                            <a class="nav-link d-inline mt-3" href="cart.html"><i class="bi bi-basket2-fill"></i></a>
+                            <a class="nav-link d-inline mt-3" href="#"><i class="bi bi-heart-fill"></i></a>
+                        </div>
+                    </nav>
+                </header>
+                <!------------------------------- Header End ------------------------------->
+
+                <div id="index-main">
+                    <!------------------------------- Carousel ------------------------------->
+                    <section class="carousel-section">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide fullwidth-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/images/carousel-img1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/carousel-img2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/carousel-img3.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!------------------------------- Carousel ------------------------------->
+
+                    <! ------------------------------- Unique Features Section ------------------------------- >
+                    <section class="brand-features-section py-5">
+                        <div class="container">
+                            <div class="row text-center justify-content-center">
+
+                                <!-- Feature 1 -->
+                                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                    <div class="brand-feature-item">
+                                        <img src="assets/images/return.png" alt="Easy Return" class="brand-feature-icon mb-3">
+                                        <h5 class="brand-feature-title">Easy Return</h5>
+                                        <p class="brand-feature-text">365 days Easy Return & Exchange orders</p>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 2 -->
+                                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                    <div class="brand-feature-item">
+                                        <img src="assets/images/key.png" alt="Gold Key Service" class="brand-feature-icon mb-3">
+                                        <h5 class="brand-feature-title">Gold Key Service</h5>
+                                        <p class="brand-feature-text">Voice of Customer team</p>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 3 -->
+                                <div class="col-12 col-md-4">
+                                    <div class="brand-feature-item">
+                                        <img src="assets/images/sustainable.png" alt="Sustainable" class="brand-feature-icon mb-3">
+                                        <h5 class="brand-feature-title">Sustainable</h5>
+                                        <p class="brand-feature-text">We give back for every sale</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <! ------------------------------- Unique Features Section ------------------------------- >
+
+                    <section class="collection-section container-fluid py-5" id="index-product-container">
+                        <div class="row justify-content-center g-4" id="index-product">
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img1.jpeg" alt="Tops" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">SAMSUNG</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img2.jpg" alt="Dresses" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">IPHONE</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img3.jpg" alt="Dresses" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">VIVO</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img4.jpg" alt="Bottoms" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">HONOR</h5>
+                                </div>
+                            </div>                      
+                        </div>
+                    </section>
+
+                    <section class="collection-section container-fluid py-5" id="index-product-container">
+                        <div class="row justify-content-center g-4" id="index-product">
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img5.jpg" alt="Tops" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">OPPO</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img6.jpg" alt="Dresses" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">NUBIA nubia</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img7.jpg" alt="Dresses" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">REDMI</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <div class="collection-card">
+                                    <img src="assets/images/img8.jpg" alt="Bottoms" class="img-fluid collection-img">
+                                    <h5 class="collection-title mt-3">HUAWEI</h5>
+                                </div>
+                            </div>                      
+                        </div>
+                    </section>
+
+                    <! ------------------------------- New Arrivals ------------------------------- >
+                    <section class="newarrivals-section container-fluid py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 px-3 px-md-5">
+                            <h2 class="newarrivals-title mb-0">
+                                New Arrivals <span class="newarrivals-subtitle">/ Ease Into Coziness</span>
+                            </h2>
+                            <a href="#" class="newarrivals-viewall">View All</a>
+                        </div>
+
+                        <div class="row justify-content-center g-4 px-3 px-md-5">
+
+                            <!-- Product 1 -->
+                            <div class="col-6 col-md-4 col-lg-3 text-center">
+                                <div class="newarrivals-card">
+                                    <div class="newarrivals-image-wrapper">
+                                        <span class="newarrivals-badge">NEW</span>
+                                        <img src="assets/images/img1.jpeg" class="img-fluid newarrivals-img" alt="Product 1">
+                                    </div>
+                                    <p class="newarrivals-name mt-3">Relaxed Crew Neck Long Sleeve Top</p>
+                                    <p class="newarrivals-price">$59.00</p>
+                                    <div class="newarrivals-colors">
+                                        <span class="color-dot" style="background-color:#4a4a4a;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-6 col-md-4 col-lg-3 text-center">
+                                <div class="newarrivals-card">
+                                    <img src="assets/images/img2.jpg" class="img-fluid newarrivals-img" alt="Product 2">
+                                    <p class="newarrivals-name mt-3">Mid Rise Straight Leg Pants</p>
+                                    <p class="newarrivals-price">$89.00</p>
+                                    <div class="newarrivals-colors">
+                                        <span class="color-dot" style="background-color:#5c4b47;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-6 col-md-4 col-lg-3 text-center">
+                                <div class="newarrivals-card">
+                                    <span class="newarrivals-badge">NEW</span>
+                                    <img src="assets/images/img4.jpg" class="img-fluid newarrivals-img" alt="Product 3">
+                                    <p class="newarrivals-name mt-3">Relaxed Fit V-Neck Top with Scarf</p>
+                                    <p class="newarrivals-price">$59.00</p>
+                                    <div class="newarrivals-colors">
+                                        <span class="color-dot" style="background-color:#bfc3c6;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="col-6 col-md-4 col-lg-3 text-center">
+                                <div class="newarrivals-card">
+                                    <img src="assets/images/img7.jpg" class="img-fluid newarrivals-img" alt="Product 4">
+                                    <p class="newarrivals-name mt-3">Shawl Collar Long Cardigan</p>
+                                    <p class="newarrivals-price">$139.00</p>
+                                    <div class="newarrivals-colors">
+                                        <span class="color-dot" style="background-color:#4a4a4a;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <! ------------------------------- New Arrivals ------------------------------- >
+
+                    <! ------------------------------- Customer Says Section ------------------------------- >
+                    <section class="customer-says-section py-5">
+                        <div class="container">
+                            <h3 class="customer-says-title mb-4">
+                                Customer Says <span class="customer-says-subtitle">/ With 90% Customer Satisfaction</span>
+                            </h3>
+
+                            <div id="customerSaysCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 text-center text-md-start">
+                                                <div class="customer-says-content">
+                                                    <div class="customer-stars mb-3">
+                                                        ★★★★★
+                                                    </div>
+                                                    <p class="customer-says-quote">
+                                                        “This is absolutely the most satisfying top I've bought recently, as well as the most satisfying brand I've recently purchased from.”
+                                                    </p>
+                                                    <div class="customer-says-meta mt-4">
+                                                        <hr class="customer-says-line">
+                                                        <a href="#" class="customer-says-link">Judge.me</a>
+                                                        <p class="customer-says-rating">
+                                                            Rated 4.75/5 stars based on 16,000+ reviews
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 text-center">
+                                                <img src="assets/images/img1.jpeg" alt="Customer Review" class="img-fluid customer-says-image">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 text-center text-md-start">
+                                                <div class="customer-says-content">
+                                                    <div class="customer-stars mb-3">
+                                                        ★★★★★
+                                                    </div>
+                                                    <p class="customer-says-quote">
+                                                        “Amazing quality and super comfortable. I’ll definitely buy again!”
+                                                    </p>
+                                                    <div class="customer-says-meta mt-4">
+                                                        <hr class="customer-says-line">
+                                                        <a href="#" class="customer-says-link">Judge.me</a>
+                                                        <p class="customer-says-rating">
+                                                            Rated 4.8/5 stars based on 20,000+ reviews
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 text-center">
+                                                <img src="assets/images/img2.jpg" alt="Customer Review" class="img-fluid customer-says-image">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Controls -->
+                                <button class="carousel-control-prev customer-says-control" type="button" data-bs-target="#customerSaysCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next customer-says-control" type="button" data-bs-target="#customerSaysCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <! ------------------------------- Customer Says Section ------------------------------- >
+
+                <! ------------------------------- Footer Start ------------------------------- >
+                <div class="col-12">
+                    <hr class="border border-1 border-dark" />
+                </div>
+
+                <footer class="footer text-black pb-2">
+                    <div class="container">
+                        <div class="row text-sm-center text-md-start">
+
+                            <!-- Brand / Contact -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                <h3 class="mt-4 mb-3 footer-title">Style Crate</h3>
+                                <hr class="footer-divider">
+
+                                <h6 class="text-uppercase mb-3 fw-bold">Contact Us</h6>
+                                <p><i class="bi bi-house-fill me-2"></i> Maradana, Colombo 10, Sri Lanka</p>
+                                <p><i class="bi bi-envelope-fill me-2"></i> stylecrate@gmail.com</p>
+                                <p><i class="bi bi-telephone-fill me-2"></i> +94 116 767632</p>
+                                <p><i class="bi bi-whatsapp me-2"></i> +94 765 54542</p>
+                            </div>
+
+                            <!-- Quick Links -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                <h5 class="fw-bold mb-3 footer-subtitle">Quick Links</h5>
+                                <a href="index.html" class="footer-link">Home</a><br />
+                                <a href="profile.html" class="footer-link">My Account</a><br />
+                                <a href="about.html" class="footer-link">About Us</a><br />
+                                <a href="contact.html" class="footer-link">Contact Us</a>
+                            </div>
+
+                            <!-- Subscribe + Social -->
+                            <div class="col-12 col-md-4 col-lg-4 mb-4">
+                                <h5 class="fw-bold mb-3 footer-subtitle">Stay Connected</h5>
+                                <input type="email" class="form-control mb-2 footer-input" placeholder="name@gmail.com" />
+                                <button class="footer-btn w-100 mt-2">Subscribe</button>
+
+                                <ul class="list-unstyled list-inline mt-4">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="footer-social"><i class="bi bi-twitter"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="footer-social"><i class="bi bi-whatsapp"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="footer-social"><i class="bi bi-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- Bottom bar -->
+                <div class="footer-bottom text-center">
+                    <p class="m-0 py-2 text-white fw-semibold">
+                        Copyright &copy; 2024 StyleCrate. All Rights Reserved.
+                    </p>
+                </div>
+
+                <! ------------------------------- Footer End ------------------------------- >
+
+            </div>
+        </div>
+
+        <script src="assets/js/notification.js"></script>
+        <script src="assets/js/bootstrap.bundle.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/cart.js"></script>
+    </body>
+</html>

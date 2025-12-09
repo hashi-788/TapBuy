@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Verify Account</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body class="sc-body">
+        <div class="sc-container">
+            <div class="sc-card">
+                <div class="sc-image-section">
+                    <img src="assets/images/bg.jpg" class="sc-image">
+                </div>
+                <div class="sc-form-section">
+                    <div class="sc-tab">
+                        <a  class="sc-tab-active">Verify Account</a>
+                    </div>
+                    <p class="text-danger" id="message"></p>
+
+                    <div class="sc-form">
+                        <label for="email" class="sc-label">Verification Code:</label>
+                        <div class="sc-input-box">
+                            <input type="email" id="verification" class="sc-input" >
+                        </div>
+
+                        <button type="button" class="sc-btn" onclick="verifyAccount();">VERIFY</button>
+                         <a href="sign-in.html" class="sc-forgot">Sign In</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/verify-account.js"></script>
+        
+    </body>
+</html>
